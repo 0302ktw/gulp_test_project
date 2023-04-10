@@ -1,0 +1,472 @@
+.c-gnb {
+    $self : &;
+
+    z-index:5;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100px;
+    padding:0 80px;
+    background-color:transparent;
+    @include mobile {
+        padding:0 20px;
+    }
+
+    &__logo {
+        z-index:6;
+        position:relative;
+        display:block;
+        top: -100px;
+        width:208px;
+        height:20px;
+        background:url(../img/common/pivot_logo_1_k.png) no-repeat center center;
+        background-size:100%;
+        transition:background-image .5s ease;
+
+        @include mobile {
+            width:83.5px;
+            height:32.5px;
+            background:url(../img/common/m_pivot_logo_1_k.png) no-repeat center center;
+            background-size:100%;
+        }
+    }
+
+    &__btn-menu {
+        z-index:6;
+        position:relative;
+        top: -100px;
+        width:26px;
+        height:20px;
+        -webkit-tap-highlight-color: transparent;
+        @include mobile {
+            width:25px;
+            height:21px;
+        }
+
+        &:focus {
+            outline:none;
+        }
+
+        &:not(&__btn-menu--open):hover {
+            #{$self}__btn-menu-element:nth-child(1) {
+                margin-top:8px;
+                @include mobile {
+                    margin-top:9px;
+                }
+            }
+            #{$self}__btn-menu-element:nth-child(2) {
+                margin-top:8px;
+                @include mobile {
+                    margin-top:9px;
+                }
+            }
+            #{$self}__btn-menu-element:nth-child(3) {
+                margin-top:8px;
+                @include mobile {
+                    margin-top:9px;
+                }
+            }
+        }
+
+        &-element {
+            position:absolute;
+            top:0;
+            display:block;
+            width:100%;
+            height:4px;
+            background:#000;
+            transition:all 0.3s ease-in-out;
+
+            @include mobile {
+                height: 3px;
+            }
+
+            &:nth-child(1) {
+                margin-top:0px;
+            }
+            &:nth-child(2) {
+                margin-top:8px;
+                @include mobile {
+                    margin-top:9px;
+                }
+            }
+            &:nth-child(3) {
+                margin-top:16px;
+                @include mobile {
+                    margin-top:18px;
+                }
+            }
+        }
+
+        &--open {
+            
+            #{$self}__btn-menu-element:nth-child(1) {
+                margin-top:8px;
+                animation:firstBar 0.5s forwards;
+            }
+            #{$self}__btn-menu-element:nth-child(2) {
+                opacity:0;
+            }
+            #{$self}__btn-menu-element:nth-child(3) {
+                margin-top:8px;
+                animation:lastBar 0.5s forwards;
+            }
+        }
+
+        &--open-click {
+            #{$self}__btn-menu-element:nth-child(1) {
+                animation:firstBarOpenClick 0.5s forwards;
+                @include mobile {
+                    animation:initBar1 0.3s 0.3s forwards;
+                }
+            }
+            #{$self}__btn-menu-element:nth-child(3) {
+                animation:lastBarOpenClick 0.5s forwards;
+                @include mobile {
+                    animation:initBar3 0.3s 0.3s forwards;
+                }
+            }
+        }
+        
+    }
+
+    &__full-menu {
+        z-index:2;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100vw;
+        height:auto;
+        opacity:0;
+        transition:opacity .5s ease;
+
+        &-bg {
+            z-index:-1;
+            position:absolute;
+            width:100%;
+            height:100%;
+            background:#ffF;
+            opacity:0;
+            transition:all .5s ease;
+            
+        }
+
+        &-wrap {
+            z-index:6;
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        &-list {
+            width:100%;
+            padding:0 20px;
+        }
+
+        &-item {
+            text-align:center;
+
+            & {
+                margin-top:20px;
+            }
+
+            &:first-child {
+                margin-top:0;
+            }
+
+            &--introduce {
+                #{$self}__full-menu-linker {   
+                    transform:translateY(25px);             
+                    opacity: 0;
+                    animation:frameHeaderLnb1st .5s ease-in-out .5s forwards;
+                }
+            }
+
+            &--project {
+                #{$self}__full-menu-linker {                   
+                    transform:translateY(-25px);
+                    opacity: 0;
+                    animation:frameHeaderLnblast .5s ease-in-out .5s forwards;
+                }
+            }
+
+            &--questions {
+                display:none;                
+                overflow:hidden;
+                margin-top:0;
+                height:0;
+                @include desktop {
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+                @include mobile {
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                }
+            }
+            
+        }
+
+        &-guide-line {
+            width:100%;
+            max-width:350px;
+            height:1px;
+            margin:0 auto;
+            margin-top:20px;
+            background:#000;
+            //transition:all 1s ease;
+        }
+
+        &-linker {       
+            display:block;     
+            @include font('nanumGothic', 700, 36px);
+            @include mobile {
+                @include font('nanumGothic', 700, 30.5px);
+            }
+        }
+
+        @at-root .l-gnb__sns {
+            z-index:-1;
+            position:fixed;
+            top:50%;
+            right:0;
+            transform:translateY(-50%);
+            opacity:0;
+            transition:all .5s ease;
+            @include mobile {
+                top:auto;
+                bottom:20px;
+                transform:translateY(0);
+            }
+        }
+
+        @at-root .c-gnb__sns {
+            transform:translateX(-80px);
+
+            &-list {
+                display:flex;
+                flex-direction:column;
+            }
+    
+            &-item {
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                margin-top:20px;
+
+                &:first-child {
+                    margin-top:0;
+                }
+            }
+
+            &-linker {
+                display:block;                
+            }
+
+            &-icon {
+                font-size:22px;
+            }
+            &-icon.fa-youtube::before {
+                content: "";
+                display: block;
+                width: 18px;
+                height: 20px;
+                background: url(/img/common/ico_youtube.png) 100%;
+            }
+        }
+
+        @at-root .c-gnb__desc {
+            position:fixed;
+            left:80px;
+            bottom:40px;
+            width:400px;
+            @include mobile {
+                left:20px;
+                bottom:20px;
+            }
+
+            &-word {
+                display:block;
+                height:0;
+                overflow:hidden;                
+                animation:frameHeaderDesc .5s ease-in 1s forwards;
+                @include font('avenir', 350, 14px);
+            }
+
+            &-word:last-child{
+                padding-top: 5px;
+            }
+
+            &--mo {                
+
+                #{$self}__desc-word {
+                    @include font('avenir', 350, 14px);
+                }
+
+                #{$self}__desc-word--small {
+                    color:#a3a3a3;
+                    @include font('avenir', 300, 10px);
+                    @include mobile {
+                        font-weight: 350;
+                    }
+                }
+            }
+        }
+    }
+
+    &--main {
+        z-index: 3;
+        
+        #{$self}__full-menu {
+            height: auto;
+        }
+
+        #{$self}__logo {
+            background:url(../img/common/pivot_logo_1_w.png) no-repeat center center;
+            background-size:100%;
+
+            @include mobile {
+                width:83.5px;
+                height:32.5px;
+                background:url(../img/common/m_pivot_logo_1_w.png) no-repeat center center;
+                background-size:100%;
+            }
+        }
+
+        #{$self}__btn-menu-element {
+            background:#fff;
+        }
+
+        &.active {
+            #{$self}__btn-menu-element {
+                background:#000;
+            }
+
+            #{$self}__logo {
+                background:url(../img/common/pivot_logo_1_k.png) no-repeat center center;
+                background-size:100%;
+
+                @include mobile {
+                    width:83.5px;
+                    height:32.5px;
+                    background:url(../img/common/m_pivot_logo_1_k.png) no-repeat center center;
+                    background-size:100%;
+                }
+            }
+        }
+    }
+
+    &--default-white {
+        #{$self}__btn-menu-element {
+            background:#fff;
+        }
+
+        #{$self}__logo {
+            background:url(../img/common/pivot_logo_1_w.png) no-repeat center center;
+            background-size:100%;
+
+            @include mobile {
+                background:url(../img/common/m_pivot_logo_1_w.png) no-repeat center center;
+                background-size:100%;
+            }
+        }
+    }
+
+    &.active {
+        z-index:20;
+        
+        #{$self}__btn-menu-element {
+            background:#000;
+        }
+
+        #{$self}__logo {
+            background:url(../img/common/pivot_logo_1_k.png) no-repeat center center;
+            background-size:100%;
+
+            @include mobile {
+                background:url(../img/common/m_pivot_logo_1_k.png) no-repeat center center;
+                background-size:100%;
+            }
+        }
+
+        #{$self}__full-menu {
+            z-index:5;
+            opacity:1;
+            height: 100vh;
+
+            &-bg {
+                z-index:5;
+                opacity:1;
+            }
+
+            & .l-gnb__sns {
+                z-index:6;
+                opacity:1;
+            }
+
+            & .c-gnb__sns{
+                opacity:0;
+                animation:frameHeaderSns .5s ease-in-out .5s forwards;
+                @include mobile {
+                    animation:frameHeaderSnsMo .5s ease-in-out .5s forwards;
+                }
+            }
+
+            #{$self}__full-menu-item--questions {
+                animation:mobileShowMenu .5s ease-in-out 1.2s forwards;
+            }
+    
+            #{$self}__full-menu-guide-line--overlap {
+                margin-top:-1px;
+            }
+        }
+    }
+
+    &.black {
+        #{$self}__btn-menu-element {
+            background:#000;
+        }
+
+        #{$self}__logo {
+            background:url(../img/common/pivot_logo_1_k.png) no-repeat center center;
+            background-size:100%;
+
+            @include mobile {
+                background:url(../img/common/m_pivot_logo_1_k.png) no-repeat center center;
+                background-size:100%;
+            }
+        }
+    }
+    &.white {
+        #{$self}__btn-menu-element {
+            background:#fff;
+        }
+
+        #{$self}__logo {
+            background:url(../img/common/pivot_logo_1_w.png) no-repeat center center;
+            background-size:100%;
+
+            @include mobile {
+                width:83.5px;
+                height:32.5px;
+                background:url(../img/common/m_pivot_logo_1_w.png) no-repeat center center;
+                background-size:100%;
+            }
+        }
+    }
+    
+    &.disable {
+        #{$self}__full-menu {
+            animation: closeGnbFullmenu 0.5s ease forwards;
+        }
+    }
+
+}
+  

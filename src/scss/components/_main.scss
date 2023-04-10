@@ -1,0 +1,540 @@
+:lang(ko) body{font-family: 'Nanum Gothic', sans-serif;}
+:root {
+    --user-cross-effect-size : 489px;
+    --user-transY-when-scroll : 100px;
+    @include mobile {
+        --user-cross-effect-size : 224px;
+        --user-transY-when-scroll: 50px;
+    }
+}
+
+html,
+body {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+
+body {
+	line-height: 1.2;
+	width: 100%;
+	&.body-scroll-lock {
+		overflow: hidden;
+	}
+}
+
+.contact-pjt.active{
+    display: block;
+    @include mobile {
+        display: none;
+        visibility: hidden;
+        left: -9999px;
+    }
+}
+.contact-pjt.active .mask-contact-title {
+    position: absolute;
+    display: block;
+    margin-top: -35px;
+    height: 30px;
+    width: 0px;
+    background: #000;
+    z-index: -1;
+    animation: frameMaskContactTitle 1s forwards cubic-bezier(0.42, 0, 0.58, 1) running;
+}
+.contact-pjt.active .mask-contact {
+    position: absolute;
+    display: block;
+    margin-top: -13.5px;
+    height:13.5px; 
+    width: 0px;
+    background: #fff; 
+    animation:frameMaskContact 1s forwards cubic-bezier(0.42, 0.0, 0.58, 1.0) running;
+}
+
+.contact-pjt {
+    display: none;
+    position: absolute;
+    position:fixed; 
+    width: 250px;
+    overflow: hidden;
+    bottom: 40px; right: 70px;
+    text-align: right;
+    z-index: 6;
+}
+.contact-pjt span {
+    margin-bottom: 5px;
+    margin-right: 9px;
+    display: block;
+}
+.contact-pjt .contact-title,
+.contact-pjt .contact {
+    color:#fff;
+}
+.contact-pjt .contact-title{
+    padding: 7px 0 5px;
+    transform:skew(-0.1deg); // 나눔스퀘어 폰트깨짐 방지
+    @include font('nanumSquare', 600, 1.5rem);
+    cursor: pointer;
+}
+.contact-pjt .contact{
+    margin-right: 0;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+.contact-pjt.black .contact {
+    color:rgba(0, 0, 0, 1);
+}
+
+.main {
+    position: relative;
+    width: 100%; 
+    height: 100vh; 
+}
+.main .main__wrap {
+    height: 100%;
+}
+.main .section-wrap {
+    position: absolute;
+}
+
+.main .main__wrap section {
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    -webkit-transition: all .7s ease; -moz-transition: all .7s ease; transition: all .7s ease;
+    position: relative; 
+}
+.main .main__wrap .title-area {
+    position: absolute;
+    width: 80%;
+    height: var(--user-cross-effect-size);
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+    z-index: 2;
+    opacity: 1;
+    text-align:center;
+    margin : 0 auto;
+    @include mobile {
+        position: fixed;
+    }
+}
+.main .main__wrap .title-area h2.linker {
+    z-index: 1;
+    display: block;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+    color:#fff;
+    text-align:center;
+    text-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.main .main__wrap .title-area h2:not(.linker) {
+    margin:0;
+    color:#fff;
+    text-align:center;
+    text-shadow:0 0 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+    letter-spacing: -100px;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;
+}
+.main.active .main__wrap .title-area.active h2:not(.linker) {
+    z-index: 1;
+    margin:0;
+    opacity: 1;
+    -webkit-transition: all .7s ease; -moz-transition: all .7s ease; transition: all .7s ease; 
+}
+.main .main__wrap .title-area h2{
+    font-family: 'nanumSquare';
+    font-weight: 700;
+    white-space: nowrap;
+    @include mobile {
+        $size-abs : 3.4rem;
+        $size-rel : 8.4vw;
+        font-size: css-min( #{ $size-abs }, #{ $size-rel } );
+        letter-spacing: 5px;
+    }
+    @include tablet {
+        font-size: 4.5rem;
+        letter-spacing: 5px;
+    }
+    @include desktop {
+        font-size:  6.1rem;
+        letter-spacing: 7.5px;
+    }
+}
+.main.active .main__wrap .title-area.active h2{
+    font-weight: 700;
+    font-family: 'nanumSquare';
+    @include mobile {
+        $size-abs : 3.4rem;
+        $size-rel : 8.4vw;
+        font-size: css-min( #{ $size-abs }, #{ $size-rel } );
+        //font-size: 4.534vw;
+        letter-spacing: 5px;
+    }
+    @include tablet {
+        font-size: 4.5rem;
+        //font-size: 3.13vw;
+        letter-spacing: 5px;
+    }
+    @include desktop {
+        font-size:  6.1rem;
+        //font-size: 3.13vw;
+        letter-spacing: 7.5px;
+    }
+}
+
+.main .main__wrap .title-area .bg-effect {
+    position: absolute;
+    background:rgba(255, 255, 255, 1);
+    width: 2px; 
+    height: var(--user-cross-effect-size);
+    left: 50%;
+    transform: translateX(-50% );
+    -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease; 
+    @include mobile {
+        height: var(--user-cross-effect-size);
+    }
+}
+.main.active .main__wrap .title-area.active .bg-effect {
+    -webkit-transition: all .7s ease; -moz-transition: all .7s ease; transition: all .7s ease;
+    width: 44px; background:rgba(255, 255, 255, .1);
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -o-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    left: 50%;
+    transform: translateX(-50% );
+    @include mobile {
+        width: 22px;
+    }
+} 
+.main.active .main__wrap .title-area:not(.active).hide .bg-effect {
+    -webkit-transition: all .1s ease; -moz-transition: all .1s ease; transition: all .1s ease;
+    opacity: 0;
+} 
+
+.main.active .main__wrap .title-area .cross {
+    display: block;
+    position: absolute;
+    background:rgba(255, 255, 255, 1); 
+    left: 50%;
+    transform: translateX(-50% );    
+    width: 0px;
+}
+
+.main.active .main__wrap .title-area .cross.row1,
+.main.active .main__wrap .title-area .cross.row2 {
+    height: 2px;
+    top:50%;
+}
+
+.main.active .main__wrap .title-area .cross.row1.mouse-enter.mouse-leave {
+    animation:frameEffectBgCrossRow1 .3s forwards;    
+}
+.main.active .main__wrap .title-area .cross.row2.mouse-enter.mouse-leave {
+    animation:frameEffectBgCrossRow2 .3s forwards;    
+}
+.main.active .main__wrap .title-area:not(.active) .cross.row1.mouse-enter {
+    animation:frameEffectBgCrossRow1Hover .2s ease-in forwards;
+} 
+.main.active .main__wrap .title-area:not(.active) .cross.row2.mouse-enter {
+    animation:frameEffectBgCrossRow2Hover .2s ease-in forwards;
+} 
+.main.active .main__wrap .title-area:not(.active) .cross.row1.rotation {
+    animation:frameEffectBgCrossRow1Rotation 5s  forwards;
+} 
+.main.active .main__wrap .title-area:not(.active) .cross.row2.rotation {
+    animation:frameEffectBgCrossRow2Rotation 5s  forwards;
+} 
+
+.main.active .main__wrap .title-area:not(.active) .cross.col1,
+.main.active .main__wrap .title-area:not(.active) .cross.col2 { 
+    height: var(--user-cross-effect-size);
+} 
+.main.active .main__wrap .title-area .cross.col1.mouse-leave {
+    animation:frameEffectBgCrossCol1 1.3s ease-in forwards;    
+}
+.main.active .main__wrap .title-area .cross.col2.mouse-leave {
+    animation:frameEffectBgCrossCol2 1.3s ease-in forwards;    
+}
+.main.active .main__wrap .title-area:not(.active) .cross.col1.mouse-enter {    
+    animation:frameEffectBgCrossCol1Hover .2s ease-in .3s forwards;
+} 
+.main.active .main__wrap .title-area:not(.active) .cross.col2.mouse-enter {    
+    animation:frameEffectBgCrossCol2Hover .2s ease-in .3s forwards;
+} 
+.main.active .main__wrap .title-area:not(.active) .cross.col1.rotation {
+    width: 2px;
+    animation:frameEffectBgCrossCol1Rotation 5s  forwards;
+} 
+.main.active .main__wrap .title-area:not(.active) .cross.col2.rotation {
+    width: 2px;
+    animation:frameEffectBgCrossCol2Rotation 5s  forwards;
+}
+
+.main .main__wrap section .bg {
+    z-index:0;
+    // position:relative;
+    overflow:hidden;
+    display: block;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+    top: 0;left: 0; 
+    width: 100vw;
+    //height: 100vh; // yj.baek 0728 option : page slide motion
+}
+.main .main__wrap section .bg::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(110%);
+    background: inherit;
+    transition: inherit;
+}
+.main.loading .main__wrap section .bg::before{
+    transform: scale(110%);
+}
+.main.prepare .main__wrap section .bg,
+.main.active .main__wrap section .bg {
+    background-size: cover;
+    -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;
+}
+.main.prepare .main__wrap section .bg::before,
+.main.active .main__wrap section .bg::before {
+    transform: scale(100%);
+}
+
+.main .main__wrap .descriptions {
+    z-index: 1;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40px; left: 80px; 
+    color:#fff;    
+    @include mobile {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+.main .main__wrap .descriptions li {
+    transform:skew(-0.1deg); // 나눔스퀘어 폰트깨짐 방지
+    color:#fff;
+    @include font('nanumSquare', 400, 1.6rem);
+    @include mobile {
+        $size-abs : 1.4rem;
+        $size-rel : 3.6vw;
+        font-size: css-min( #{ $size-abs }, #{ $size-rel } );
+    }
+}
+
+.main .main__wrap .descriptions .desc-title{
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 7px;
+    // &:after{
+    //     content: '';
+    //     height: 2px;
+    //     flex-grow: 1;
+    //     margin-left: 13px;
+    //     background: #fff;
+    //     @include mobile {
+    //         margin-left: 8.5px;
+    //     }
+    // }
+    @include mobile {
+        //margin-bottom: 7px;
+    }
+}
+.main .main__wrap .descriptions .desc-title--text {   
+    font-weight:700;
+}
+.main .main__wrap .descriptions .mask-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.main .main__wrap .descriptions .desc-wrap {
+    position: relative;
+}
+.main .main__wrap .descriptions .mask-desc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.main.active .main__wrap .mask {
+    display: block;
+    width: 0px;
+    background: #fff; 
+    animation:frameMask 1s forwards cubic-bezier(0.42, 0.0, 0.58, 1.0);
+    @include mobile {
+        $size-abs : 16.8px;
+        $size-rel : 4.5vw;
+    }
+}
+
+
+.main .main__wrap .scroll {
+    display:flex;
+    z-index:2;
+    position:fixed;
+    width: 24px;
+    height: 45px;
+    bottom: -80px;
+	left: 50%;
+	transform: translate( -50%, -50% );
+    @include mobile {
+        display: none;
+        visibility: hidden;
+        left: -9999px;
+    }
+}
+
+.main .main__wrap .scrollbar {
+    display: block;
+    position: absolute;
+    width: 24px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+}
+
+.main .main__wrap .scrollbar::before {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    content: '';
+    width: 4px;
+    height: 4px;
+    margin-left: -2px;
+    background-color: #fff;
+    border-radius: 100%;
+    -webkit-animation: frameScrollbar 2s infinite;
+    animation: frameScrollbar 2s infinite;
+}
+.main .main__wrap .paging-wrap {
+    @include mobile {
+        position: fixed;
+        display: flex;
+        right: 20px;
+        bottom: 14px;
+    }
+}
+.main .main__wrap .paging-total, .main .paging-current
+{   
+    z-index:1;
+    position:fixed;
+    top:50%;
+    height:48px;
+    color:#fff;
+    overflow:hidden;
+    margin: 0 auto;
+    @include font('avenir', 900, 4rem);
+    transform: translate( 0%, -50% );
+    @include mobile {
+        position: initial;
+        top: initial;
+        right: initial;
+        bottom: initial;
+        left: initial;
+        transform: initial;
+    }
+}
+.main .main__wrap .paging-total{
+    padding-left:5px;
+    right: -80px;
+    -webkit-text-fill-color: transparent; 
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+    @include mobile {
+        display: flex;
+        align-items: end;
+        right:20px;
+        -webkit-text-stroke-width: 0.5px;
+        $size-abs : 3.88rem;
+        $size-rel : 10.4vw;
+        font-size: css-min( #{ $size-abs }, #{ $size-rel } );
+        letter-spacing: 2px;
+    }
+}
+
+.main .main__wrap .paging-current {
+    left: -80px;
+    @include mobile {
+        left:initial;
+    }
+}
+
+.main .main__wrap .paging-current .current {
+    margin-top : 0px;
+    -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease-in-out;
+}
+
+.main .main__wrap .paging-current li {
+    height: 48px;
+    @include font('avenir', 900, 4rem);
+    color:#fff;
+    @include mobile {
+        display: flex;
+        align-items: end;
+        left:initial;
+        $size-abs : 3.88rem;
+        $size-rel : 10.4vw;
+        font-size: css-min( #{ $size-abs }, #{ $size-rel } );
+    }
+}
+
+.main .main__wrap .cross-effect {z-index:1; position: fixed; height: 100%; width: 100%; margin: 0; top:0.1px;}
+.main .main__wrap .cross-effect span { display: block; position: absolute;  background:rgba(255, 255, 255, 0.8); width: 300px; }
+.main .main__wrap .cross-effect.active .row {
+    top: 50%;
+    -webkit-animation:frameCrossRow 3s forwards;
+    animation:frameCrossRow 3s forwards;
+}
+.main .main__wrap .cross-effect.active .col {
+    left: 50%;
+    -webkit-animation:frameCrossCol 3s forwards;
+    animation:frameCrossCol 3s forwards;
+}
+
+.main .dim {position:absolute;z-index:1;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0); transition:background-color .5s ease;}
+.main .dim.dark {background-color:rgba(0,0,0,.5);}
+
+/* animation */
+.text-animation-wrap {display: block; font-size: inherit; font-weight: inherit; color: inherit;}
+.wait-animation,
+.wait-text-animation {opacity: 0; font-size: inherit; font-weight: inherit; color: inherit;}
+.wait-text-animation.active {display: block; animation: frameTextSlideUp 1s ease forwards; animation-delay: .3s;}
+.wait-animation.active {animation: frameFadeIn 1s ease-in forwards;}
+.layer.wait-animation,
+.layer.wait-animation.active {animation: frameLayerTranslateY 1.5s ease forwards;}
+.align-group-animation {opacity: 0;}
+.align-group-animation.active {animation: frameSlideUp 1s ease forwards; animation-delay: .3s;}
+/* // animation */
+
+@media all and (max-width:750px) {
+    .wait-text-animation.active {animation-delay: .7s;}
+    .underline.active:before,
+    .underline.active:after {animation: frameFillUnderline 1s ease forwards;}
+}

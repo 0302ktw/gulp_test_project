@@ -1,0 +1,215 @@
+/* components title start */
+
+.c-title {
+    $self : &;
+
+    &--project-kv {
+
+        position: absolute;
+        top: calc(310% * 100 / 1307);
+        left: calc(332% * 100 / 1920);
+        width: max-content;
+        @include font('avenir', 900, 4.233vw);
+        line-height: 1.6;
+        letter-spacing: 0;
+        color: #000;
+
+        @include mobile {
+            position: absolute;
+            top: calc(276 * 100% / 1403);
+            left: calc(88 * 100% / 750);
+            @include font('avenir', 900, calc(74 / 750 * 100vw));
+            line-height: 1.4324;
+        }
+    }
+
+    &--white {
+        color: #fff;
+    }
+}
+
+.c-sub-title {
+    $self : &;
+
+    #{$self}__tit {
+        @include font('noto', 700, 1.754vw);
+        line-height: 1.323;
+
+        @include mobile {
+            font-size: calc(44 * 100vw / 750);
+            line-height: 1.363;
+        }
+    }
+
+    #{$self}__tit--small {
+        font-family: 'avenir';
+        font-weight: '900';
+        font-size: 0.826vw;
+
+        @include mobile {
+            font-size: 3.2vw;
+        }
+    }
+
+    #{$self}__tit--desc {
+        @include font('noto', 400, 0.826vw);
+        line-height: 1.5;
+
+        @include mobile {
+            font-size: calc(28 * 100vw / 750);
+            line-height: 1.428;
+        }
+    }
+
+    &--type01 {
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 10;
+        width: 100%;
+
+        @include mobile {
+            padding: 0 calc(88% * 100 / 750);
+        }
+
+        #{$self}__tit--small {
+            width: 100%;
+            margin-bottom: calc(55% * 100 / 1920);
+            padding-left: calc(320% * 100 / 1920);
+            padding-right: calc(320% * 100 / 1920);
+
+            @include mobile {
+                width: 100%;
+                margin-bottom: calc(30% * 100 / 574);
+                padding: initial;
+            }
+        }
+
+        #{$self}__tit {
+            width: 50%;
+            padding-left: calc(320% * 100 / 1920);
+
+            @include mobile {
+                width: 100%;
+                padding: initial;
+            }
+        }
+
+        #{$self}__tit--desc {
+            width: 50%;
+            padding-right: calc(320% * 100 / 1920);
+
+            @include mobile {
+                width: 100%;
+                margin-top: calc(63% * 100 / 574);
+                padding: initial;
+
+                br {
+                    display:none;
+                }
+            }
+
+            @include tablet {
+                br {
+                    display:none;
+                }
+            }
+
+            @include desktop {
+                white-space: nowrap;
+                br {
+                    display:block;
+                }
+            }
+        }
+    }
+
+    &--type02 {
+        z-index: 10;
+        width: 100%;
+
+        @include mobile {
+            padding: 0 calc(88% * 100 / 750);
+        }
+
+        #{$self}__tit--small {
+            width: 100%;
+            margin-bottom: calc(37% * 100 / 1920);
+            padding-left: calc(320% * 100 / 1920);
+            padding-right: calc(320% * 100 / 1920);
+            line-height: 1;
+
+            @include mobile {
+                padding: initial;
+            }
+        }
+
+        #{$self}__tit {
+            margin-bottom: calc(38% * 100 / 1920);
+            padding-left: calc(320% * 100 / 1920);
+            padding-right: calc(320% * 100 / 1920);
+            
+            @include mobile {
+                margin-bottom: calc(27% * 100 / 574);
+                padding: initial;
+            }
+        }
+
+        #{$self}__tit--desc {
+            padding-left: calc(320% * 100 / 1920);
+            padding-right: calc(320% * 100 / 1920); 
+
+            @include mobile {
+                padding: initial;
+            }
+        }
+    }
+
+    &--left {
+        text-align: left;
+
+        @include mobile {
+        }
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--center-left {
+        padding-left: 50%;
+        padding-right: calc(320% * 100 / 1920);
+
+        @include mobile {
+            padding: 0 calc(88% * 100 / 750);
+        }
+
+        #{$self}__tit {
+            padding: initial;
+        }
+
+        #{$self}__tit--desc {
+            padding: initial;
+        }
+    }
+
+    &--right {
+        text-align: right;
+        padding-left: calc(320% * 100 / 1920);
+        padding-right: calc(320% * 100 / 1920);
+    }
+
+    &--white {
+
+        #{$self}__tit {
+            color: #fff;
+        }
+
+        #{$self}__tit--small {
+            color: #fff;
+        }
+
+        #{$self}__tit--desc {
+            color: #fff;
+        }
+    }
+}

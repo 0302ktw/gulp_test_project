@@ -1,0 +1,87 @@
+[{
+    "header": [{
+            "label": "1 Depth",
+            "width": 10,
+            "type": "text"
+        },
+        {
+            "label": "2 Depth",
+            "width": 10,
+            "type": "text"
+        },
+        {
+            "label": "3 Depth",
+            "width": 10,
+            "type": "text"
+        },
+        {
+            "label": "4 Depth",
+            "width": 10,
+            "type": "text"
+        },
+        {
+            "label": "ID",
+            "width": 10,
+            "type": "text"
+        },
+        {
+            "label": "URL",
+            "width": 15,
+            "type": "link"
+        },
+        {
+            "label": "Divison",
+            "width": 5,
+            "type": "text"
+        },
+        {
+            "label": "Date",
+            "width": 5,
+            "type": "text"
+        },
+        {
+            "label": "Status",
+            "width": 5,
+            "type": "status"
+        },
+        {
+            "label": "Memo",
+            "type": "memo"
+        },
+        {
+            "label": "0124 이후 수정사항",
+            "width": 15,
+            "type": "memo"
+        }
+    ],
+    "list": [{
+        "id": 1,
+        "cell1": "MAIN",
+        "cell2": "",
+        "cell3": "",
+        "cell4": "",
+        "cell5": "",
+        "cell6": "main/MA_1.html",
+        "cell7": "",
+        "cell8": "",
+        "cell9": 2,
+        "cell10": "0112 로 검색, 0112 부분 삭제/변경 ",
+        "cell11": "0413 2차 개편 - kv 하단 라운딩 링크 적용 및 하단 슬라이드 추가 / 0207 문구수정(메인공통) / 0126 히어로 계급 삭제, 스크립트 initialize(); afterIncludeHTML(); 제거"
+    },
+    {
+        "id": 2,
+        "cell1": "masonry_test",
+        "cell2": "",
+        "cell3": "",
+        "cell4": "",
+        "cell5": "",
+        "cell6": "kor/masonry_test.html",
+        "cell7": "",
+        "cell8": "",
+        "cell9": 3,
+        "cell10": "진행중",
+        "cell11": ""
+    }
+    ]
+}
+]

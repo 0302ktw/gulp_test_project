@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>masonry-test</title>
+    <!-- <link rel="stylesheet" href="../../css/common.css"> -->
+    <!-- <link rel="stylesheet" href="../../css/components.css"> -->
+    <style>
+        body {overflow-y:scroll;}
+        .masonry-wrap {max-width:1280px;height:100%;margin:0 auto;padding-left:15px;}
+        .grid-sizer {width:calc(33.3333% - 15px);}
+        .grid-item {width:calc(33.3333% - 15px);/* margin-top:20px; */font-size:0;margin-top:15px;}
+        .grid-item img {display:block;width:100%;}
+        .load-ele {width:calc(33.3333% - 15px);height:300px;background:#333;}
+        .footer {width:100%;height:300px;background:#ccc;text-align:center;}
+        .footer p {font-size:50px;color:#fff;}
+
+        @media all and (max-width:750px) {
+            .masonry-wrap {width:100%;padding-left:0;}
+            .grid-sizer {width:100%;}
+            .grid-item {width:100%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="masonry-wrap">
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <div class="grid-item"><img src="../../images/test/locomotive01.jpg" alt=""></div>
+            <div class="grid-item"><img src="../../images/test/locomotive02.jpg" alt=""></div>
+            <div class="grid-item"><img src="../../images/test/locomotive03.jpg" alt=""></div>
+            <div class="grid-item"><img src="../../images/test/locomotive03.jpg" alt=""></div>
+            <div class="grid-item"><img src="../../images/test/locomotive01.jpg" alt=""></div>
+            <div class="grid-item"><img src="../../images/test/locomotive02.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>footer</p>
+    </div>
+<!-- lib js -->
+<script src="../../js/lib/jquery_3.6.0.js" type="text/javascript"></script>
+<script src="../../js/lib/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+<script src="../../js/lib/masonry.pkgd.min.js" type="text/javascript"></script>
+<!-- // lib js -->
+<!-- js -->
+<script src="../../js/character.js" type="text/javascript"></script>
+<!-- // js -->
+</body>
+</html>

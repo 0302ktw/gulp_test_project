@@ -1,0 +1,25 @@
+.skip-navi {
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+
+    &__linker {
+        position: absolute;
+        top: -999px;
+        left: 0;
+        padding: 10px 20px;
+        font-size: 14px;
+        line-height: 14px;
+        color: #fff;
+        text-align: center;
+        background: #000;
+
+        &:active,
+        &:focus {
+            overflow: hidden;
+            top: 0;
+            text-decoration: none;
+            z-index: 101;
+        }
+    }
+}

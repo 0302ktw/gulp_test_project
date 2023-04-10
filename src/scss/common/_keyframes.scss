@@ -1,0 +1,251 @@
+@keyframes firstBar{
+    50%{transform:rotate(0deg);}
+    100%{transform:rotate(45deg);}
+}
+@keyframes lastBar{
+    50%{transform:rotate(0deg);}
+    100%{transform:rotate(-45deg);}
+}
+@keyframes initBar1{
+    0%{margin-top:11px;}
+    100%{margin-top:0px;}
+}
+@keyframes initBar3{
+    0%{margin-top:11px;}
+    100%{margin-top:22px;}
+}
+@include mobile {
+    @keyframes initBar3{
+        0%{margin-top:11px;}
+        100%{margin-top:18px;}
+    }
+}
+@keyframes firstBarOpenClick{
+    0%{transform:rotate(45deg); opacity:0;}
+    100%{transform:rotate(0deg); opacity:1;}
+}
+@keyframes lastBarOpenClick{
+    0%{transform:rotate(-45deg); opacity:0;}
+    100%{transform:rotate(0deg); opacity:1;}
+}
+@keyframes firstBarOpenClick{
+    0%{transform:rotate(45deg); opacity:0;}
+    100%{transform:rotate(0deg); opacity:1;}
+}
+@keyframes lastBarOpenClick{
+    0%{transform:rotate(-45deg); opacity:0;}
+    100%{transform:rotate(0deg); opacity:1;}
+}
+@keyframes frameHeaderLnb1st {
+    0%  {transform:translateY(25px); opacity:0;}
+    30% {transform:translateY(25px); opacity:.1;}
+    100%{transform:translateY(0); opacity:1;}
+}
+@keyframes frameHeaderLnblast {
+    0%  {transform:translateY(-25px); opacity:0;}
+    30% {transform:translateY(-25px); opacity:.1;}
+    100%{transform:translateY(0); opacity:1;}
+}
+@keyframes frameHeaderSns {
+    0%  {transform:translateX(0); opacity:0;}
+    100%{transform:translateX(-80px); opacity:1;}
+}
+@keyframes frameHeaderSnsMo {
+    0%  {transform:translateX(0); opacity:0;}
+    100%{transform:translateX(-20px); opacity:1;}
+}
+@keyframes frameHeaderDesc {
+    0%  {height:0px; margin-top:20px; opacity:0;}
+    100%{height:20px; margin-top:0px; opacity:1;}
+}
+@keyframes closeGnbFullmenu {
+    0%  {height:100vh;}
+    99% {height:100vh;}
+    100%{height:auto;}
+}
+@keyframes frameSubjectTitle {
+    0%  { height: 0px;  margin-top: 0px; opacity: 0; }
+    100%{ height: 20px; margin-top: 20px; opacity: 1; }    
+}
+@keyframes frameSubjectVTitle {
+    0%  { height: 0px;  margin-bottom: 25px; opacity: 0; }
+    100%{ height: 18px; margin-bottom: 0px; opacity: 1; }
+}
+@keyframes marqueeTextLoad {
+    0% {transform:translateX(100%);}
+    100% {transform:translateX(0%);}
+}
+@keyframes marqueeText {
+    0% {transform:translateX(0%);}
+    100% {transform:translateX(-100%);}
+}
+@keyframes mobileShowMenu {
+    0% {height:0;}
+    100% {height:76px;}
+}
+@keyframes frameMaskContactTitle {
+    0%{ width: 0%;  transform:translateX(0%); }
+    50%{ width: 300px;  transform:translateX(0%); }
+    100%{ width: 300px;  transform:translateX(0%); }
+}
+@keyframes frameMaskContact {
+    0%{ width: 0%;  transform:translateX(0%); }
+    50%{ width: 300px;  transform:translateX(0%); }
+    100%{ width: 0%;  transform:translateX(301px); }
+}
+@keyframes frameMask {
+    0%{ width: 0%;  transform:translateX(0%); }
+    50%{ width:300px;  transform:translateX(0%); }
+    100%{ width:100%;  transform:translateX(301px); }
+}
+@keyframes frameEffectBgCrossRow1 {
+    0%  { transform: translateX( -50% ); width: var(--user-cross-effect-size); opacity: 1; }
+    100%{ transform: translateX( 0% ); width: 0px;   opacity: 1; }
+}
+@keyframes frameEffectBgCrossRow2 {
+    0%  { transform: translateX( -50% ); width: var(--user-cross-effect-size); opacity: 1; }
+    100%{ transform: translateX( 0% ); width: 0px;   opacity: 1; }
+}
+@keyframes frameEffectBgCrossRow1Hover {
+    0%  { width: 0px;   opacity: 1; }
+    100%{ width: var(--user-cross-effect-size); opacity: 1; }
+}
+@keyframes frameEffectBgCrossRow2Hover {
+    0%  { width: 0px;   opacity: 1; }
+    100%{ width: var(--user-cross-effect-size); opacity: 1; }
+}
+@keyframes frameEffectBgCrossCol1 {
+    0%  { transform: translateX( -50% ) rotate(0deg); opacity: 1; width: 2px; }
+    100%{ transform: translateX( -50% ) rotate(0deg); opacity: 0; width: 0px; }
+}
+@keyframes frameEffectBgCrossCol2 {
+    0%  { transform: translateX( -50% ) rotate(0deg); opacity: 1; width: 2px; }
+    100%{ transform: translateX( -50% ) rotate(0deg); opacity: 0; width: 0px; }
+}
+@keyframes frameEffectBgCrossCol1Hover {
+    0%  { transform: translateX( -50% ) rotate(0deg); opacity: 1; width: 0px; }
+    100%{ transform: translateX( -50% ) rotate(0deg); opacity: 1; width: 2px; }
+}
+@keyframes frameEffectBgCrossCol2Hover {
+    0%  { transform: translateX( -50% ) rotate(0deg); opacity: 1; width: 0px; }
+    100%{ transform: translateX( -50% ) rotate(0deg); opacity: 1; width: 2px; }
+}
+@keyframes frameEffectBgCrossRow1Rotation {
+    0%  { transform: translateX( -50% ) rotate(-0deg);   width: var(--user-cross-effect-size); opacity: 1; }
+    0%  { transform: translateX( -50% ) rotate(-0deg);   width: var(--user-cross-effect-size); opacity: 1; }
+    20% { transform: translateX( -50% ) rotate(-180deg); width: var(--user-cross-effect-size); opacity: 0; } 
+    30% { transform: translateX( -50% ) rotate(-180deg); width: var(--user-cross-effect-size); opacity: 0; } 
+    40% { transform: translateX( -50% ) rotate(-360deg); width: var(--user-cross-effect-size); opacity: 1; }
+    50% { transform: translateX( -50% ) rotate(-180deg); width: var(--user-cross-effect-size); opacity: 1; }
+    60% { transform: translateX( -50% ) rotate(-180deg); width: var(--user-cross-effect-size); opacity: 1; }
+    80% { transform: translateX( -50% ) rotate(-0deg);   width: var(--user-cross-effect-size); opacity: 1; }
+    100%{ transform: translateX( -50% ) rotate(-0deg);   width: var(--user-cross-effect-size); opacity: 1; }
+}
+@keyframes frameEffectBgCrossCol1Rotation {
+    0%  { transform: translateX( -50% ) rotate(-0deg);   height: var(--user-cross-effect-size); opacity: 0; }
+    0%  { transform: translateX( -50% ) rotate(-0deg);   height: var(--user-cross-effect-size); opacity: 0; }
+    20% { transform: translateX( -50% ) rotate(-270deg); height: var(--user-cross-effect-size); opacity: 1; }
+    30% { transform: translateX( -50% ) rotate(-270deg); height: var(--user-cross-effect-size); opacity: 1; } 
+    40% { transform: translateX( -50% ) rotate(-360deg); height: var(--user-cross-effect-size); opacity: 1; }
+    50% { transform: translateX( -50% ) rotate(-270deg); height: var(--user-cross-effect-size); opacity: 0; }
+    60% { transform: translateX( -50% ) rotate(-270deg); height: var(--user-cross-effect-size); opacity: 0; }
+    80% { transform: translateX( -50% ) rotate(-0deg);   height: var(--user-cross-effect-size); opacity: 1; }
+    100%{ transform: translateX( -50% ) rotate(-0deg);   height: var(--user-cross-effect-size); opacity: 1; }
+} 
+@keyframes frameEffectBgCrossRow2Rotation {
+    0%  { transform: translateX( -50% ) rotate(0deg);            width: var(--user-cross-effect-size); height: 2px; opacity: 1; }
+    20% { transform: translateX( -50% ) rotate(90deg) scale(.6); width: var(--user-cross-effect-size); height: 0px; opacity: 0; }
+    30% { transform: translateX( -50% ) rotate(90deg) scale(.6); width: var(--user-cross-effect-size); height: 0px; opacity: 0; }
+    40% { transform: translateX( -50% ) rotate(0deg);            width: var(--user-cross-effect-size); height: 2px; opacity: 1; }
+    41% { transform: translateX( -50% ) rotate(0deg);            width: var(--user-cross-effect-size); height: 2px; opacity: 1; }
+    50% { transform: translateX( -50% ) rotate(90deg) scale(.6); width: var(--user-cross-effect-size); height: 0px; opacity: 0; }    
+    60% { transform: translateX( -50% ) rotate(90deg) scale(.6); width: var(--user-cross-effect-size); height: 0px; opacity: 1; }    
+    80% { transform: translateX( -50% ) rotate(0deg);            width: var(--user-cross-effect-size); height: 2px; opacity: 0; }
+    100%{ transform: translateX( -50% ) rotate(0deg);            width: var(--user-cross-effect-size); height: 2px; opacity: 1; }
+} 
+@keyframes frameEffectBgCrossCol2Rotation {
+    0%  { transform: translateX( -50% ) rotate(0deg);            width: 2px;  height: var(--user-cross-effect-size); opacity: 1; }
+    20% { transform: translateX( -50% ) rotate(20deg) scale(.7); width: 0px;  height: var(--user-cross-effect-size); opacity: 0; } 
+    30% { transform: translateX( -50% ) rotate(20deg) scale(.7); width: 0px;  height: var(--user-cross-effect-size); opacity: 0; } 
+    40% { transform: translateX( -50% ) rotate(0deg);            width: 2px;  height: var(--user-cross-effect-size); opacity: 1; }
+    41% { transform: translateX( -50% ) rotate(0deg);            width: 2px;  height: var(--user-cross-effect-size); opacity: 1; }
+    50% { transform: translateX( -50% ) rotate(20deg) scale(.7); width: 0px;  height: var(--user-cross-effect-size); opacity: 0; } 
+    60% { transform: translateX( -50% ) rotate(20deg) scale(.7); width: 0px;  height: var(--user-cross-effect-size); opacity: 1; } 
+    80% { transform: translateX( -50% ) rotate(0deg);            width: 2px;  height: var(--user-cross-effect-size); opacity: 0; }
+    100%{ transform: translateX( -50% ) rotate(0deg);            width: 2px;  height: var(--user-cross-effect-size); opacity: 1; }
+}
+@keyframes frameScrollbar {
+    0% { -webkit-transform: translateY(0); opacity: 0; }
+    40% { opacity: 1; }
+    80% { -webkit-transform: translateY(20px); opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes frameCrossRow {
+    0%   { transform: translateX( -100% ); width: 0%; left:0%; opacity: 1; height: 1px;}
+    20%  { transform: translateX( 0% ); width: 100%; left:0%; opacity: 1; height: 1px;}
+    30%  { transform: translateX( calc(var(--user-cross-effect-size)/-2) ); width: var(--user-cross-effect-size); left:50%; opacity: 1; height: 1px;}
+    40%  { transform: translateX( calc(var(--user-cross-effect-size)/-2) ); width: var(--user-cross-effect-size); left:50%; opacity: 1; height: 2px; background:rgba(255, 255, 255, 1);}
+    45%  { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 1);}
+    60%  { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 0.5);}
+    70%  { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 0.5);}
+    100% { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 0.5);}
+}
+@-webkit-keyframes frameCrossRow {
+    0%   { transform: translateX( -100% ); width: 0%; left:0%; opacity: 1; height: 1px;}
+    20%  { transform: translateX( 0% ); width: 100%; left:0%; opacity: 1; height: 1px;}
+    30%  { transform: translateX( calc(var(--user-cross-effect-size)/-2) ); width: var(--user-cross-effect-size); left:50%; opacity: 1; height: 1px;}
+    40%  { transform: translateX( calc(var(--user-cross-effect-size)/-2) ); width: var(--user-cross-effect-size); left:50%; opacity: 1; height: 2px; background:rgba(255, 255, 255, 1);}
+    45%  { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 1);}
+    60%  { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 0.5);}
+    70%  { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 0.5);}
+    100% { transform: translateX( 0% ); width: 0px; left:50%; opacity: 0; height: 2px; background:rgba(255, 255, 255, 0.5);}
+}
+@keyframes frameCrossCol {
+    0%   { transform: translateY( -100% ); height: 0%; top:0%; opacity: 1; width: 1px;}
+    20%  { transform: translateY( 0% ); height: 100%; top:0%; opacity: 1; width: 1px;}
+    30%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 1; width: 1px;}
+    50%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0;  width: 2px; background:rgba(255, 255, 255, 1);}
+    60%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0;  width: 2px; background:rgba(255, 255, 255, 0.5);}
+    90%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0; width: 0px; background:rgba(255, 255, 255, 0.1);}
+    100% { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0; width: 0px; background:rgba(255, 255, 255, 0.1);}
+}
+@-webkit-keyframes frameCrossCol {
+    0%   { transform: translateY( -100% ); height: 0%; top:0%; opacity: 1; width: 1px;}
+    20%  { transform: translateY( 0% ); height: 100%; top:0%; opacity: 1; width: 1px;}
+    30%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 1; width: 1px;}
+    50%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0;  width: 2px; background:rgba(255, 255, 255, 1);}
+    60%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0;  width: 2px; background:rgba(255, 255, 255, 0.5);}
+    90%  { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0; width: 0px; background:rgba(255, 255, 255, 0.1);}
+    100% { transform: translateY( calc(var(--user-cross-effect-size)/-2) ); height: var(--user-cross-effect-size); top:50%; opacity: 0; width: 0px; background:rgba(255, 255, 255, 0.1);}
+}
+@keyframes frameFadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes frameFadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+@keyframes frameSlideUp {
+    0% {transform: translateY(var(--user-scroll-animation-translateY)); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+@keyframes frameTextSlideUp {
+    0% {transform: translateY(var(--user-scroll-animation-translateY)); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+@keyframes frameFillUnderline {
+    0% {width: 0; opacity: 1;}
+    100% {width: 100%; opacity: 1;}
+}
+@keyframes frameLayerTranslateY {
+    0% {transform: translateY(0); opacity: 1;}
+    100% {transform: translateY(-50%); opacity: 1;}
+}
+
+@media all and (max-width:750px) {
+    @keyframes frameLayerTranslateY {
+        0% {transform: translateY(0%); opacity: 1;}
+        100% {transform: translateY(-30%); opacity: 1;}
+    }   
+}

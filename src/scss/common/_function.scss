@@ -1,0 +1,26 @@
+// css의 min(), max(), clamp() 작동 안돼서 추가 했으나, 
+// MIN(), MAX()와 같이 대문자로 넣으면 적용됨.
+//
+//	사용예제
+//		$size-abs : 3.4rem;
+//      $size-rel : 8.4vw;
+//      font-size: css-min( #{ $size-abs }, #{ $size-rel } );
+//
+@function css-function( $function, $values... ) {
+	@return 
+		$function
+		+ unquote( '(' )
+		+ $values
+		+ unquote( ')' )
+	;
+}
+@function css-min( $values... ) {
+	@return css-function( min, $values );
+}
+@function css-max( $values... ) {
+	@return css-function( max, $values );
+}
+
+@function css-clamp( $values... ) {
+	@return css-function( clamp, $values );
+}

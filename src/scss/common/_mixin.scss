@@ -1,0 +1,80 @@
+@mixin line-clamp($lineHeight, $height, $line){
+	display:-webkit-box;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	max-height:$height + px;
+	line-height:$lineHeight + px;
+	word-wrap:break-word;
+	word-break:break-word;
+	-webkit-line-clamp:$line; 
+	-webkit-box-orient:vertical;
+}
+@mixin clearfix{
+	&:after{
+		display:block;
+		clear:both;
+		content:'';
+	}
+}
+@mixin font($font, $weight, $size/* , $space:-0.5px */) {
+	// D: function test 이상없음 --> 잘 적용 됨 확인
+	// string인자는 ''로 묶어야 js와 혼선이 없음, 다만 이문제는 묶지 않아도 code에는 오류 없었음.
+	// function 선언에서 파라미터간 space를 한개씩 주는 것이 좋음
+	@if $font == 'noto' {
+		font-family:'NotoSansKR','appleGothicNeo','sf-ui-display','roboto','sans-serif';
+	} 
+	@else if $font == 'apple' {
+		font-family:'appleGothicNeo','NotoSansKR','sf-ui-display','roboto','sans-serif';
+	} 
+	@else if $font == 'sf' {
+		font-family:'sf-ui-display','NotoSansKR','appleGothicNeo','roboto','sans-serif';
+	} 
+	@else if $font == 'roboto' {
+		font-family:'roboto','NotoSansKR','appleGothicNeo','sf-ui-display','sans-serif';
+	} 
+	@else if $font == 'nanumGothic' {
+		font-family:'Nanum Gothic';
+	}
+	@else if $font == 'nanumSquare' {
+		font-family:'NanumSquare';
+	}
+	@else if $font == 'avenir' {
+		font-family:'avenir';
+	}
+
+	font-weight:$weight;
+	font-size:$size;
+	// letter-spacing:$space;
+}
+@mixin flex-all-center {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+@mixin mac {
+    .mac & {
+        @content;   
+    }
+}
+
+// 미디어쿼리
+$mobile : 751px;
+$tablet : 1023px;
+$desktop : 1024px;
+
+@mixin mobile {
+	@media (max-width : $mobile) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media (min-width : $mobile) {
+		@content;
+	}
+}
+@mixin desktop {
+	@media (min-width : $desktop) {
+		@content;
+	}
+}

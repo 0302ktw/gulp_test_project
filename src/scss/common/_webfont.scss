@@ -1,0 +1,198 @@
+/* FONTS */
+@font-face {
+  font-family: 'appleGothicNeo';
+  font-weight: 200; // thin
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOT.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'appleGothicNeo';
+  font-weight: 300; // light
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOL.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'appleGothicNeo';    
+  font-weight: 400; // Regular
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOR.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'appleGothicNeo';    
+  font-weight: 500; // Medium
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOM.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'appleGothicNeo';    
+  font-weight: 700; // Bold
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOB.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'appleGothicNeo';
+  font-weight: 800; // ExtraBold
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOEB.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'appleGothicNeo';
+  font-weight: 900; // Heavy
+  src:url("../font/AppleSDGothioc/APPLESDGOTHICNEOH.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'sf-ui-display';    
+  font-weight: 400;
+  src:url("../font/SF_UI_display/SF-UI-Display-Regular.ttf") format('opentype'); 
+}
+@font-face {
+  font-family: 'sf-ui-display';    
+  font-weight: 500;
+  src:url("../font/SF_UI_display/SF-UI-DISPLAY-MEDIUM.ttf") format('opentype');  
+}
+@font-face {
+  font-family: 'sf-ui-display';    
+  font-weight: 700;
+  src:url("../font/SF_UI_display/SF-UI-DISPLAY-BOLD.ttf") format('opentype');  
+}
+
+/* noto-sans-kr-300(light) - korean */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../font/NotoSansKR/noto-sans-kr-v27-korean-300.woff2') format('woff2');
+}
+/* noto-sans-kr-regular(normal, demilgiht) - korean */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NotoSansKR/noto-sans-kr-v27-korean-regular.woff2') format('woff2');
+}
+/* noto-sans-kr-500(medium) - korean */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../font/NotoSansKR/noto-sans-kr-v27-korean-500.woff2') format('woff2');
+}
+/* noto-sans-kr-700(bold) - korean */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NotoSansKR/noto-sans-kr-v27-korean-700.woff2') format('woff2');
+}
+/* noto-sans-kr-900(black) - korean */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 900;
+  src: url('../font/NotoSansKR/noto-sans-kr-v27-korean-900.woff2') format('woff2');
+}
+
+@font-face{
+  font-family:'roboto';
+  font-style:normal;
+  font-weight: 400;
+  src:url("../font/Roboto/ROBOTO-REGULAR.ttf") format('truetype');
+}
+@font-face{
+  font-family:'roboto';
+  font-style:normal;
+  font-weight: 500;
+  src:url("../font/Roboto/ROBOTO-MEDIUM.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'roboto';
+  font-weight: 700;
+  src:url("../font/Roboto/ROBOTO-BOLD.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/NanumSquare/NanumSquareL.ttf") format('truetype'),
+       url("../font/NanumSquare/NanumSquareL.woff") format('woff'),
+       url("../font/NanumSquare/NanumSquareL.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/NanumSquare/NanumSquareR.ttf") format('truetype'),
+       url("../font/NanumSquare/NanumSquareR.woff") format('woff'),
+       url("../font/NanumSquare/NanumSquareR.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../font/NanumSquare/NanumSquareB.ttf") format('truetype'),
+       url("../font/NanumSquare/NanumSquareB.woff") format('woff'),
+       url("../font/NanumSquare/NanumSquareB.woff2") format('woff2');
+}
+@font-face {
+  font-family: 'NanumSquare';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NanumSquare/NanumSquareEB.ttf") format('truetype'),
+       url("../font/NanumSquare/NanumSquareEB.woff") format('woff'),
+       url("../font/NanumSquare/NanumSquareEB.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../font/NanumGothic/nanum-gothic-regular.woff2') format('woff2'),
+       url('../font/NanumGothic/nanum-gothic-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../font/NanumGothic/nanum-gothic-700.woff2') format('woff2'),
+       url('../font/NanumGothic/nanum-gothic-700.woff') format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../font/NanumGothic/nanum-gothic-800.woff2') format('woff2'),
+       url('../font/NanumGothic/nanum-gothic-800.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'avenir';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/avenir/Avenir_Light.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'avenir';
+  font-style: normal;
+  font-weight: 350;
+  src: url("../font/avenir/Avenir_Book.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'avenir';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../font/avenir/Avenir_Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'avenir';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../font/avenir/Avenir_Medium.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'avenir';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/avenir/Avenir_Heavy.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'avenir';
+  font-style: normal;
+  font-weight: 900;
+  src: url("../font/avenir/Avenir_Black.ttf") format('truetype');
+}

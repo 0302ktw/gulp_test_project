@@ -1,0 +1,157 @@
+/* components list start */
+.c-list {
+    $self : &;
+
+    &--submain-kv {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        position: absolute;
+        left: calc(332% * 100 / 1920);
+        width: calc(460% * 100 / 1920);
+        grid-gap: calc(20% * 100 / 1920);
+
+        @include mobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            position: absolute;
+            top: calc(1183% * 100 / 1403);
+            left: 0;
+            width: 100%;
+            padding: 0 calc(88% * 100 / 750);
+            grid-gap: calc(40% * 100 / 750);
+        }
+
+        #{$self}__item {
+            width: 100%;
+        }
+
+        #{$self}__title {
+            @include font('noto', 700, 0.825vw);
+            color: #000;
+
+            @include mobile {
+                @include font('apple', 800, 3.46vw);
+            }
+        }
+
+        #{$self}__desc-wrap {
+            margin-top: calc(20% * 100 / 150);
+
+            @include mobile {
+                margin-top: calc(23vw * 100 / 750);
+            }
+        }
+
+        #{$self}__desc {
+            @include font('noto', 300, 0.825vw);
+            line-height: 1.375;
+            color: #000;
+            white-space: nowrap;
+
+            @include mobile {
+                font-size: 3.2vw;
+                line-height: 1.416;
+            }
+        }
+    }
+
+    &--type01 {
+        top: calc(706% * 100 / 1307);
+        @include mobile {
+            top: calc(1179% * 100 / 1403);
+        }
+    }
+
+    &--type02 {
+        top: calc(836% * 100 / 1307);
+        @include mobile {
+            top: calc(1179% * 100 / 1403);
+        }
+    }
+
+    &--white {
+        #{$self}__title {
+            color: #fff;
+        }
+
+        #{$self}__desc {
+            color: #fff;
+        }
+    }
+
+    &--card {
+        #{$self}__item {
+            position: absolute;
+            width: calc(489 * 100% / 1920);
+
+            @include mobile {
+                width: calc(346 * 100% / 750);
+            }
+        }
+
+        #{$self}__item:nth-child(1) {
+            top: calc(696 * 100% / 1361);
+            left: calc(-103 * 100% / 1920);
+
+            @include mobile {
+                top: calc(625 * 100% / 1630);
+                left: calc(-87 * 100% / 750);
+            }
+        }
+
+        #{$self}__item:nth-child(2) {
+            top: calc(618 * 100% / 1361);
+            left: calc(316 * 100% / 1920);
+
+            @include mobile {
+                top: calc(585 * 100% / 1630);
+                left: calc(217 * 100% / 750);
+            }
+        }
+
+        #{$self}__item:nth-child(3) {
+            
+
+            @include mobile {
+                top: calc(516 * 100% / 1630);
+                left: calc(520 * 100% / 750);
+            }
+        }
+
+        #{$self}__item:nth-child(4) {
+            top: calc(519 * 100% / 1361);
+            left: calc(750 * 100% / 1920);
+            
+
+            @include mobile {
+                top: calc(1108 * 100% / 1630);
+                left: calc(-87 * 100% / 750);
+            }
+        }
+
+        #{$self}__item:nth-child(5) {
+            top: calc(437 * 100% / 1361);
+            left: calc(1181 * 100% / 1920);
+            
+
+            @include mobile {
+                top: calc(1049 * 100% / 1630);
+                left: calc(224 * 100% / 750);
+            }
+        }
+
+        #{$self}__item:nth-child(6) {
+            top: calc(351 * 100% / 1361);
+            left: calc(1612 * 100% / 1920);
+            @include mobile {
+                top: calc(989 * 100% / 1630);
+                left: calc(527 * 100% / 750);
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+}

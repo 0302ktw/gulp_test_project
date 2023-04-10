@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  @@include('../../include/meta.html')
+  <title>0한동</title>
+  @@include('../../include/css.html')
+</head>
+<body>
+<div id="document" class="wrapper">
+    <!-- header -->
+    @@include('../../include/header.html')
+    <!-- // header -->
+    <!-- content-wrap -->
+    <div id="content-wrap" class="main">
+        <div class="content-main">
+            <div class="main-kv">
+                <div class="kv-slider swiper-container">
+                    <!-- 20220106 수정 -->
+                    <ul class="kv-image-list swiper-wrapper">
+                        <li class="kv-imagevent-item swiper-slide player1">
+                            <a href="#" class="kv-img kv1">
+                                <img src="../../images/main/main_kv_1.png" alt="">
+                            </a>
+                        </li>
+                        <li class="kv-imagevent-item swiper-slide player1">
+                            <a href="#" class="kv-img kv1">
+                                <img src="../../images/main/main_kv_2.png" alt="">
+                            </a>
+                        </li>
+                        <li class="kv-imagevent-item swiper-slide player1">
+                            <a href="#" class="kv-img kv1">
+                                <img src="../../images/main/main_kv_3.png" alt="">
+                            </a>
+                        </li>
+                        <!-- multi list -->
+                    </ul>
+                    <!-- //20220106 수정 -->
+                    <div class="kv-controller">
+                        <div class="kv-pagination swiper-pagination">
+                        </div>
+                    </div>
+                    <div class="main-kv__bg">
+                        <img src="../../images/main/mask_w.png" alt="">
+                    </div>
+                    <svg class="main-kv__anchor">
+                        <defs>
+                            <clipPath id="mainKvPathDim" clipPathUnits="objectBoundingBox">
+                                <path width="720" height="767" viewBox="0 0 720 767" transform="scale(0.0014, 0.0067)" d="M720.5 107.5C362 217 105 75.5 0 0V150H720.5V107.5Z"></path>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            <!--  0414 : 개발사 요청으로 해당 스크립트 제거하여 테스트앱에서 확인 필요 -->
+            <div class="guide-content1">
+                <div class="tab-menu">
+                    <div class="tab-list more-benefit__pagination swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="guide-content1 more-benefit__slide">
+                <div class="swiper-wrapper">
+                    <div class="coupon-content swiper-slide">
+                        <a href="#" class="coupon large more-benefit">
+                            <img class="more-benefit__image" src="../../images/main/bg_coupon_large_type1.png" alt="쿠폰">
+                        </a>
+                    </div>
+                    <div class="coupon-content swiper-slide">
+                    <a href="#" class="coupon large more-benefit">
+                        <img class="more-benefit__image" src="../../images/main/bg_coupon_large_type2.png" alt="쿠폰">
+                    </a>
+                    </div>
+                    <div class="coupon-content swiper-slide">
+                    <a href="#" class="coupon large more-benefit">
+                        <img class="more-benefit__image" src="../../images/main/bg_coupon_large_type3.png" alt="쿠폰">
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <!--  // 0414 : 개발사 요청으로 해당 스크립트 제거하여 테스트앱에서 확인 필요 -->
+            
+            <div class="guide-content1 swipe">
+                <!-- 0112 삭제 <div class="title-box">                    
+                    <h3 class="tit">가입하면 언제나<br />받을 수 있는 혜택</h3>
+                </div> -->
+                <div class="event-content1">
+                    <div class="title-box"><!-- 0112 변경 -->                   
+                        <p class="tit__small">이벤트</p>
+                        <!-- 0207 문구변경 -->
+                        <a href="#a" class="tit">0한동의 이벤트 소식</a>
+                    </div>
+
+                    <div class="swiper-container benefit-content2">
+                        <ul class="swiper-wrapper benefit-list">
+                            <li class="swiper-slide benefit-item">
+                                <a href="#a" class="event__anchor">
+                                    <div class="event__img"><img src="../../images/main/event01.png" alt=""></div>
+                                    <span class="d-day">D-11</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide benefit-item">
+                                <a href="#a" class="event__anchor">
+                                    <div class="event__img"><img src="../../images/main/event02.png" alt=""></div>
+                                    <span class="d-day">D-11</span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide benefit-item">
+                                <a href="#a" class="event__anchor">
+                                    <div class="event__img"><img src="../../images/main/event01.png" alt=""></div>
+                                    <span class="d-day">D-11</span>
+                                </a>
+                            </li>
+                            <!-- 0112 삭제 <li class="swiper-slide benefit-item first">
+                                <a href="#" class="benefit-card">
+                                    <img src="../../images/main/img_banner_benefit_1.png" alt="" />
+                                </a>
+                                <a href="#" class="benefit-card-desc">
+                                    <span class="benefit-card-tit">
+                                        대학생 수험생을 위한<br />
+                                        우주패스 특별 할인 혜택 프로모션
+                                    </span>
+                                    <span class="benefit-card-date">
+                                        2021.11.1 ~ 12.31
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide benefit-item">
+                                <a href="#" class="benefit-card">
+                                    <img src="../../images/main/img_banner_benefit_1.png" alt="" />
+                                </a>
+                                <a href="#" class="benefit-card-desc">
+                                    <span class="benefit-card-tit">
+                                        대학생 수험생을 위한<br />
+                                        우주패스 특별 할인 혜택 프로모션
+                                    </span>
+                                    <span class="benefit-card-date">
+                                        2021.11.1 ~ 12.31
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="swiper-slide benefit-item">
+                                <a href="#" class="benefit-card">
+                                    <img src="../../images/main/img_banner_benefit_1.png" alt="" />
+                                </a>
+                                <a href="#" class="benefit-card-desc">
+                                    <span class="benefit-card-tit">
+                                        대학생 수험생을 위한<br />
+                                        우주패스 특별 할인 혜택 프로모션
+                                    </span>
+                                    <span class="benefit-card-date">
+                                        2021.11.1 ~ 12.31
+                                    </span>
+                                </a>
+                            </li> -->
+                        </ul>
+                        <!-- 0111 삭제 
+                        <div class="swiper-controller">
+                            <div class="swiper-pagination"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-content1">
+                <div class="event-content1">
+                    <div class="title-box">
+                        <!-- 0207 문구변경, 태그수정, class none-anchor 추가 -->
+                        <p class="tit__small">서비스</p>
+                        <div class="tit none-anchor">0을 위한 모바일 · 라이프 혜택</div>
+                        <!-- //0207 문구변경, 태그수정, class none-anchor 추가 -->
+                        <!-- 0112 변경 
+                        <a href="#" class="link">이벤트 <i class="icon-arrow blue"></i></a>
+                        <h3 class="tit">여기! 지금이 아니면<br />받을 수 없는 혜택</h3> -->
+                    </div>
+                    <div class="event-group1">
+                        <ul class="event-list">
+                            <li class="event-item">
+                                <a href="#">
+                                    <!-- <img src="../../images/main/icon_travel.png" class="event-icon1" alt="" /> -->
+                                    <!-- 0112 event-img 추가-->
+                                    <div class="event-img"><img src="../../images/main/icon_event01.png" alt="" /></div>
+                                    <div class="event-desc1">
+                                        <!-- 0112 삭제 <p class="date">D-7</p> -->
+                                        <p class="tit">T로밍카드 초대 50% 할인</p>
+                                        <p class="sub-tit">2022.01.22 ~ 2022.01.30</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="event-item">
+                                <a href="#">
+                                    <!-- <img src="../../images/main/icon_iphone13.png" class="event-icon1" alt="" /> -->
+                                    <div class="event-img"><img src="../../images/main/icon_event02.png" alt="" /><i class="icon icon__new">NEW</i></div>
+                                    <div class="event-desc1">
+                                        <!-- <p class="date">D-10</p> -->
+                                        <p class="tit">미리 준비하는 해외 여행</p>
+                                        <p class="sub-tit">2022.01.22 ~ 2022.01.30</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="event-item">
+                                <a href="#">
+                                    <!-- <img src="../../images/main/icon_flo.png" class="event-icon1" alt="" /> -->
+                                    <div class="event-img"><img src="../../images/main/icon_event03.png" alt="" /></div>
+                                    <div class="event-desc1">
+                                        <!-- <p class="date">D-14</p> -->
+                                        <p class="tit">군인을 위한 요금 20% 할인</p>
+                                        <p class="sub-tit">2020.01.20 ~ 2021.02.22</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="guide-content1 full">
+                <div class="banner-content rate-plan">
+                    <a href="#" class="banner-box2">
+                        <img class="banner-box2__image" src="../../images/main/bg_rate_plan_2.png" alt="배너광고">
+                    </a>
+                </div>
+            </div>
+            <div class="guide-content1 full">
+                <div class="magazine-content">
+                    <div class="title-box">
+                        <!-- 0207 문구변경 -->
+                        <p class="tit__small">콘텐츠</p>
+                        <a href="#a" class="tit ft-sf-b">MAGAZINE 0</a>
+                        <!-- //0207 문구변경 -->
+                        <!-- 0112 변경 <a href="#" class="link">메거진 <i class="icon-arrow blue"></i></a><br>
+                        <div class="flex-both">
+                            <h3 class="tit">Editor's Pick!</h3>
+                            <p class="more">더보기<i class="icon-arrow black"></i></p>
+                        </div> -->
+                    </div>
+                    <div class="magazine-group">
+                        <ul class="magazine0-list is-list">
+                            <li class="magazine0-list__item">
+                                <a href="#" class="magazine0-list__anchor">
+                                    <div class="magazine0-list__thumbnail">
+                                        <img src="../../images/main/thumb01.jpg" alt="">
+                                    </div>
+                                    <div class="magazine0-list__contents">
+                                        <div class="magazine0-list__title">다채로운 플레이 닌텐도 스위치</div>
+                                        <div class="magazine0-hash">#게임 #트렌드</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="magazine0-list__item">
+                                <a href="#" class="magazine0-list__anchor">
+                                    <div class="magazine0-list__thumbnail">
+                                        <img src="../../images/main/thumb02.jpg" alt="">
+                                    </div>
+                                    <div class="magazine0-list__contents">
+                                        <div class="magazine0-list__title">깊이 있는 사운드 BOSE 스피커빔</div>
+                                        <div class="magazine0-hash">#음악 #트렌드</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="magazine0-list__item">
+                                <a href="#" class="magazine0-list__anchor">
+                                    <div class="magazine0-list__thumbnail">
+                                        <img src="../../images/main/thumb03.jpg" alt="">
+                                    </div>
+                                    <div class="magazine0-list__contents">
+                                        <div class="magazine0-list__title">인테리어 필수 일광전구</div>
+                                        <div class="magazine0-hash">#생활 #가전 #인테리어</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="magazine0-list__item">
+                                <a href="#" class="magazine0-list__anchor">
+                                    <div class="magazine0-list__thumbnail">
+                                        <img src="../../images/main/thumb04.jpg" alt="">
+                                    </div>
+                                    <div class="magazine0-list__contents">
+                                        <div class="magazine0-list__title">홈카페의 완성 일리 커피머신</div>
+                                        <div class="magazine0-hash">#생활 #취미</div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="guide-content1 full">
+                <div class="banner-content roaming-card">
+                    <a href="#" class="banner-box2" style="overflow: hidden;border-radius: 24px;">
+                        <img class="banner-box2__image" src="../../images/main/bg_baro.png" alt="배너광고">
+                    </a>
+                </div>
+            </div>
+            <div class="guide-content1 guide-content1--last">
+                <div class="board-content">
+                    <div class="title-box">
+                        <!-- 0112 삭제 <a href="#" class="link">FAQ <i class="icon-arrow blue"></i></a><br> -->
+                        <!-- 0112 변경 -->
+                        <p class="tit__small ft-sf-b">FAQ</p>
+                        <!-- 0207 문구변경 -->
+                        <a href="#a" class="tit">자주 하는 질문</a>
+                        <!-- 0112 삭제 <div class="flex-both">
+                            <h3 class="tit">자주 찾는 질문</h3>
+                            <p class="more">더보기<i class="icon-arrow black"></i></p>
+                        </div> -->
+                    </div>
+                    <div class="board">
+                        <ul class="board-list">
+                            <li class="board-item">
+                                <a href="#">
+                                    <span class="ft-sf-m spot-blue">Q.</span><!-- 0112 추가 -->
+                                    <span class="question">캠퍼스 전용 데이터 3GB는 언제 사용한지 알 수 있을까요?</span>
+                                    <!-- 0112 삭제 <i class="icon-arrow black"></i> -->
+                                </a>
+                            </li>
+                            <li class="board-item">
+                                <a href="#">
+                                    <span class="ft-sf-m spot-blue">Q.</span>
+                                    <span class="question">모이는 인원에 따라 어떻게 혜택이 다른가요?</span>
+                                    <!-- <i class="icon-arrow black"></i> -->
+                                </a>
+                            </li>
+                            <li class="board-item">
+                                <a href="#">
+                                    <span class="ft-sf-m spot-blue">Q.</span>
+                                    <span class="question">1주일 동안 이용할 수 있는 최대 데이터는 어떻게 되</span>                                            
+                                    <!-- <i class="icon-arrow black"></i> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <!-- // content-wrap -->
+    <!-- notice -->
+    <div class="footer-top">
+        <div class="swiper mySwiper footer-slide">
+            <ul class="notice-list swiper-wrapper">
+                <li class="notice-item swiper-slide">
+                    <a href="#a"><!-- 0112 삭제 <span class="strong">[공지]</span>--><i class="icon icon__bell new"></i>데이터 슈퍼패스 좀비 고등학교 제휴종료</a>
+                </li>
+                <li class="notice-item swiper-slide">
+                    <a href="#a"><!-- <span class="strong">[공지]</span>--><i class="icon icon__bell"></i>데이터 슈퍼패스 좀비 고등학교 제휴종료</a>
+                </li>
+                <li class="notice-item swiper-slide">
+                    <a href="#a"><!-- <span class="strong">[공지]</span>--><i class="icon icon__bell"></i>데이터 슈퍼패스 좀비 고등학교 제휴종료</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- // notice -->
+</div>
+@@include('../../include/script.html')
+<script>
+$(document).ready(function() {
+// 220126 임시 주석
+// initialize();
+// afterIncludeHTML();
+    var swiper = new Swiper(".kv-slider", {
+        //  loop:true,  // 0221 매안만 무한 루프 삭제
+        touchReleaseOnEdges:true,
+        touchEventsTarget:'swiper-container',
+        pagination: {
+            el: ".kv-pagination",
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper(".benefit-content2", {
+      loop:true,
+      touchReleaseOnEdges:true,
+      slidesPerView: "auto",
+      // pagination: {
+      //     el: ".swiper-pagination",
+      //     type: "fraction",
+      // }
+    }); 
+    var swiper = new Swiper(".footer-slide", {
+        direction: "vertical",
+        allowTouchMove : false,
+        loop:true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+    });
+    var swiper = new Swiper(".cate-coupon__content", {
+        loop:true,
+        touchReleaseOnEdges:true,
+        slidesPerView: "auto",
+    });
+    var swiper = new Swiper(".bottom-sheet__swiper", {
+        pagination: {
+            el: ".bottom-sheet__pagination",
+        },
+    });
+
+    // yj.baek 2022.04.22 control swiper
+    swiper.on('transitionEnd', afterInitSwiper(swiper));
+});
+</script>
+
+
+</body>
+</html>

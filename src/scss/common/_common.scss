@@ -1,0 +1,46 @@
+:root {
+    --user-scroll-animation-translateY: 100px;
+}
+
+/* 글로벌 스타일 */
+.spot-blue {
+    color: #0071ff;
+}
+
+/* 글로벌 폰트 */
+.ft-sf {
+    font-family: 'sf-ui-display';
+    font-weight: 400;
+}  
+.ft-sf-m,.sf-ft-m {
+    font-family: 'sf-ui-display';
+    font-weight: 500;
+}  
+.ft-sf-sb {
+    font-family: 'sf-ui-display';
+    font-weight: 700;
+}  
+.ft-sf-b,.sf-ft-b{
+    font-family: 'sf-ui-display';
+    font-weight: 700;
+}
+
+/* pc, mobile */
+#document {
+    overflow: hidden;
+}
+
+.hidden-p{
+    display:none !important;
+
+    @include mobile {
+        display:block !important;
+    }
+}
+.hidden-m{
+    display: block !important;
+
+    @include mobile {
+        display:none !important;
+    }
+}
