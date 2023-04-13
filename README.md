@@ -26,7 +26,7 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
     npm install -g gulp-cli
 
 
-### 버전 확인
+### 4. 버전 확인
 
 설치 한 node.js, gulp-cli 버전을 확인 합니다.
 
@@ -43,7 +43,7 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 
 결과가 위 버전보다 낮을 경우 상위 버전으로 재설치가 필요 합니다.
 
-### Project 패키지 설치
+### 5. Project 패키지 설치
 
 `package.json` 파일에 정의된 필수 모듈을 설치 합니다.
 
@@ -72,7 +72,7 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
     sass               ^1.42.1
     smooth-scrollbar    ^8.6.2
 
-### 웹서버 실행하기
+### 6. 웹서버 실행하기
 
 > project path > terminal 
     gulp
@@ -93,3 +93,5 @@ UI External: http://localhost:3001
 브라우저에서 http://localhost:3000 으로 접속후 개발을 시작하세요.
 
 port 번호는 개발 환경에 따라 달라질 수 있습니다.
+
+### 7. 소스 빌드하기
