@@ -47,6 +47,28 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 > project path > terminal 
     npm install -d
 
+위 `package.json` 파일에 정의된 필수 모듈의 버전을 업데이트 시 동작하지 않을 수 있습니다.
+아래는 현재 정의 된 모듈의 버전입니다.
+
+>  @babel/core        ^7.11.6  →   ^7.21.4
+ @babel/preset-env  ^7.11.5  →   ^7.21.4
+ autoprefixer        ^9.8.6  →  ^10.4.14
+ del                 ^4.1.0  →    ^7.0.0
+ doiuse              ^4.2.0  →    ^4.4.1
+ gulp-cache          ^1.1.1  →    ^1.1.3
+ gulp-file-include   ^2.2.2  →    ^2.3.0
+ gulp-if             ^2.0.0  →    ^3.0.0
+ gulp-imagemin       ^7.1.0  →    ^8.0.0
+ gulp-notify         ^3.2.0  →    ^4.0.0
+ gulp-postcss        ^8.0.0  →    ^9.0.1
+ gulp-sass           ^4.1.1  →    ^5.1.0
+ gulp-sourcemaps     ^2.6.5  →    ^3.0.0
+ gulp-uglify         ^1.5.4  →    ^3.0.2
+ gulp-useref         ^3.0.4  →    ^5.0.0
+ node-sass           ^7.0.1  →    ^8.0.0
+ sass               ^1.42.1  →   ^1.62.0
+ smooth-scrollbar    ^8.6.2 
+
 
 ### 웹서버 실행하기
 
