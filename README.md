@@ -49,11 +49,8 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 
 아래는 현재 정의 된 모듈의 버전입니다. 필수 모듈의 버전을 업데이트 시 동작하지 않을 수 있습니다.
 
-> cmd
     @babel/core        ^7.11.6
-
     @babel/preset-env  ^7.11.5
-
     autoprefixer        ^9.8.6
 
     del                 ^4.1.0
