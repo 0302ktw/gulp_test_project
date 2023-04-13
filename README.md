@@ -89,12 +89,13 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 웹서버 실행 후 터미널에서 다음 메시시가 확인 되면 모든 준비가 완료 된 상태입니다.
 
 > shell
+---------------------------------------
       Local: http://localhost:3000
    External: http://121.131.27.204:3000
-* * *
+-----------------------------------------
          UI: http://localhost:3001
 UI External: http://localhost:3001
-* * *
+---------------------------------------
 [Browsersync] Serving files from: ./dist
 
 브라우저에서 http://localhost:3000 으로 접속후 개발을 시작하세요.
