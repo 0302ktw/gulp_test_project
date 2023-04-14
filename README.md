@@ -50,8 +50,7 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 
 `package.json` 파일에 정의된 필수 모듈을 설치 합니다.
 
-> project path > terminal 
-    npm install
+> project path terminal > npm install
 
 
 아래는 현재 정의 된 모듈의 버전입니다. 필수 모듈의 버전을 업데이트 시 정상 동작하지 않을 수 있습니다.
@@ -81,8 +80,7 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 
 ### 6. 웹서버 실행하기
 
-> project path > terminal 
-    gulp
+> project terminal path > gulp
 
 
 웹서버 실행 후 터미널에서 다음 메시시가 확인 되면 모든 준비가 완료 된 상태입니다.
@@ -103,4 +101,4 @@ port 번호는 개발 환경에 따라 달라질 수 있습니다.
 
 ### 7. 소스 빌드하기
 
-> project path > terminal gulp build
+> project path terminal > gulp build
