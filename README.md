@@ -75,6 +75,8 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
     sass               ^1.42.1
     smooth-scrollbar    ^8.6.2
 
+위 모듈을 활용한 태스크 관리는 `gulpfile.js` 파일에서 이루어집니다.
+
 * * *
 
 ### 6. 웹서버 실행하기
@@ -100,3 +102,5 @@ port 번호는 개발 환경에 따라 달라질 수 있습니다.
 * * *
 
 ### 7. 소스 빌드하기
+
+> project path > terminal gulp build
