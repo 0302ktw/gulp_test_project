@@ -56,24 +56,24 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 
 아래는 현재 정의 된 모듈의 버전입니다. 필수 모듈의 버전을 업데이트 시 정상 동작하지 않을 수 있습니다.
 
-    @babel/core        ^7.11.6
-    @babel/preset-env  ^7.11.5
-    autoprefixer        ^9.8.6
-    del                 ^4.1.0
-    doiuse              ^4.2.0
-    gulp-cache          ^1.1.1
-    gulp-file-include   ^2.2.2
-    gulp-if             ^2.0.0
-    gulp-imagemin       ^7.1.0
-    gulp-notify         ^3.2.0
-    gulp-postcss        ^8.0.0
-    gulp-sass           ^4.1.1
-    gulp-sourcemaps     ^2.6.5
-    gulp-uglify         ^1.5.4
-    gulp-useref         ^3.0.4
-    node-sass           ^7.0.1
-    sass               ^1.42.1
-    smooth-scrollbar    ^8.6.2
+> @babel/core        ^7.11.6<br>
+> @babel/preset-env  ^7.11.5<br>
+> autoprefixer        ^9.8.6<br>
+> del                 ^4.1.0<br>
+> doiuse              ^4.2.0<br>
+> gulp-cache          ^1.1.1<br>
+> gulp-file-include   ^2.2.2<br>
+> gulp-if             ^2.0.0<br>
+> gulp-imagemin       ^7.1.0<br>
+> gulp-notify         ^3.2.0<br>
+> gulp-postcss        ^8.0.0<br>
+> gulp-sass           ^4.1.1<br>
+> gulp-sourcemaps     ^2.6.5<br>
+> gulp-uglify         ^1.5.4<br>
+> gulp-useref         ^3.0.4<br>
+> node-sass           ^7.0.1<br>
+> sass               ^1.42.1<br>
+> smooth-scrollbar    ^8.6.2
 
 * * *
 
