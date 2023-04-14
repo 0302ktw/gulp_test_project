@@ -4,7 +4,7 @@
 
 개발환경
 
-    node.js : 8.11.4 이상 (LTS 버전)<br>
+    node.js : 8.11.4 이상 (LTS 버전)
     gulp-cli : 2.0.1<br>
     gulp : 4.0.2
 
