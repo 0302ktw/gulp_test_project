@@ -104,4 +104,5 @@ port 번호는 개발 환경에 따라 달라질 수 있습니다.
 > project path terminal > gulp build
 
 터미널에서 위 명령어를 입력하면 `src` 폴더와 같은 레벨의 경로에 `dist` 폴더가 생성되어,
+
 sass 파일은 `common.css` 와 `component.css` 두개의 파일로 컴파일됩니다.
