@@ -90,8 +90,8 @@ node.js의 버전은 LTS로 다운로드 합니다. [[다운로드]](https://nod
 
     UI: http://localhost:3001
     UI External: http://localhost:3001
----------------------------------------
-    [Browsersync] Serving files from: ./dist
+
+    [Browsersync] Serving files from: src
 
 브라우저에서 http://localhost:3000 으로 접속후 개발을 시작하세요.
 
