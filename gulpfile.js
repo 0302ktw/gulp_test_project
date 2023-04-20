@@ -41,6 +41,7 @@ const config = {
 const basedir = 'src';
 const destdir = 'dist';
 const mapsdir = 'src/maps';
+const pagesdir = 'src/pages';
 const cssdir = 'src/css'
 const paths = {
   scss: {
@@ -144,7 +145,7 @@ const include= () => {
 };
 
 // dist, src/css, src/maps 디렉토리 제거
-const clean = () => del([destdir, cssdir, mapsdir]);
+const clean = () => del([destdir, cssdir, mapsdir, pagesdir]);
 const log = () => {
   console.log('reload')
 }
@@ -265,8 +266,6 @@ const watch = () => {
       .pipe(gulp.dest(paths.index.dest))
   };
 
-
-
 /*
   -------------------------------------------------------------------
   # Execute Tasks
@@ -274,6 +273,7 @@ const watch = () => {
 */
 
 const serve = gulp.series(
+  clean,
   gulp.parallel(browserSync, scss, include, watch)
 );
 
@@ -282,7 +282,7 @@ const build = gulp.series(
   scss,
   include,
   pages,
-  gulp.parallel(fonts, js, css, images, videos, index)
+  gulp.parallel(fonts, js, css, images, videos)
 );
 
 const minify = gulp.series(
