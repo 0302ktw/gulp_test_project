@@ -29,6 +29,7 @@ const newer = require("gulp-newer");
 */
 const config = {
   es5: false,
+  cssCompressing: true,
   doiuse: {
     browsers: [
       'ie >= 11'
@@ -127,7 +128,7 @@ const scss = () => {
       .pipe(sourcemaps.init())
       .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
       .pipe(postcss(processors))
-      .pipe(cssclean())
+      .pipe(gulpIf(config.cssCompressing, cssclean()))
       .pipe(sourcemaps.write('../maps'))
       .pipe(gulp.dest(paths.scss.dest));
       // .pipe(notify({ message: 'SCSS Compile Error', wait: true }));
@@ -153,10 +154,10 @@ const log = () => {
 
 // 파일 변경 감지
 const watch = () => {
-  gulp.watch(paths.scss.src, scss).on('change', path => browserSyncStream(path));
+  gulp.watch(paths.scss.src, scss).on('change', path => {config.cssCompressing = true;browserSyncStream(path);});
   gulp.watch(paths.html.src, include).on('change', path => browserSyncStream(path));
   gulp.watch(paths.include.src, include).on('change', path => browserSyncStream(path));
-  gulp.watch(paths.js.src, log).on('change', path => browserSyncStream(path));
+  gulp.watch(paths.js.src, log).on('change', path => browserSyncStream(path));  
 };
 
 /*
@@ -266,6 +267,14 @@ const watch = () => {
       .pipe(gulp.dest(paths.index.dest))
   };
 
+  /* 
+    - css 압축 여부
+  */
+    const isCSSCompressing = (cb) => {
+      config.cssCompressing = false;
+      cb();
+    };
+
 /*
   -------------------------------------------------------------------
   # Execute Tasks
@@ -279,6 +288,7 @@ const serve = gulp.series(
 
 const build = gulp.series(
   clean,
+  isCSSCompressing,
   scss,
   include,
   pages,
